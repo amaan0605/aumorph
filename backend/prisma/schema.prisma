@@ -51,3 +51,9 @@ model OrderItem {
   quantity        Int
   priceAtPurchase Float
 }
+
+model Waitlist {
+  id          String   @id @default(uuid())
+  email       String   @unique
+  createdAt   DateTime @default(now())
+}

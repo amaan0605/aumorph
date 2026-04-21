@@ -17,10 +17,12 @@ import { Wishlist } from './pages/Wishlist';
 import { Account } from './pages/Account';
 import { Orders } from './pages/Orders';
 import { Auth } from './pages/Auth';
+import { Waitlist } from './pages/Waitlist';
 import { AdminLayout } from './pages/admin/AdminLayout';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { AdminProducts } from './pages/admin/AdminProducts';
 import { AdminOrders } from './pages/admin/AdminOrders';
+import { AdminWaitlist } from './pages/admin/AdminWaitlist';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -30,40 +32,52 @@ const ScrollToTop = () => {
   return null;
 };
 
+function AppContent() {
+  const { pathname } = useLocation();
+  const isWaitlist = pathname === '/' || pathname === '/waitlist';
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'var(--color-black)' }}>
+      {!isWaitlist && <Navbar />}
+      {!isWaitlist && <CartDrawer />}
+      <main style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Waitlist />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/policies" element={<Policies />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/auth" element={<Auth />} />
+          
+          {/* Admin Dashboard Routes */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="products" element={<AdminProducts />} />
+            <Route path="orders" element={<AdminOrders />} />
+            <Route path="waitlist" element={<AdminWaitlist />} />
+          </Route>
+        </Routes>
+      </main>
+      {!isWaitlist && <Footer />}
+    </div>
+  );
+}
+
 function App() {
   return (
     <ShopProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'var(--color-black)' }}>
-          <Navbar />
-          <CartDrawer />
-          <main style={{ flex: 1 }}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/policies" element={<Policies />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/payment" element={<Payment />} />
-              <Route path="/wishlist" element={<Wishlist />} />
-              <Route path="/account" element={<Account />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/auth" element={<Auth />} />
-              
-              {/* Admin Dashboard Routes */}
-              <Route path="/admin" element={<AdminLayout />}>
-                <Route index element={<AdminDashboard />} />
-                <Route path="products" element={<AdminProducts />} />
-                <Route path="orders" element={<AdminOrders />} />
-              </Route>
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppContent />
       </BrowserRouter>
     </ShopProvider>
   );

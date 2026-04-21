@@ -1,6 +1,6 @@
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { useShop } from '../../context/ShopContext';
-import { Package, Users, ShoppingBag, LogOut } from 'lucide-react';
+import { Package, Users, ShoppingBag, LogOut, ClipboardList } from 'lucide-react';
 import { useEffect } from 'react';
 
 export const AdminLayout = () => {
@@ -42,6 +42,9 @@ export const AdminLayout = () => {
           </Link>
           <Link to="/admin/products" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '16px', borderRadius: '4px', textDecoration: 'none', color: 'var(--color-soft-grey)', transition: 'background 0.3s' }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'} onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
             <Package size={20} /> Products
+          </Link>
+          <Link to="/admin/waitlist" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '16px', borderRadius: '4px', textDecoration: 'none', color: 'var(--color-soft-grey)', transition: 'background 0.3s' }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.05)'} onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
+            <ClipboardList size={20} /> Waitlist
           </Link>
         </nav>
 

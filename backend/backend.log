@@ -1,0 +1,88 @@
+
+> backend@1.0.0 dev
+> nodemon src/index.ts
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: ts,json[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ enable debugging { debug: true }
+Server is running on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+Server is running on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/waitlist.routes.ts(16,35): error TS2339: Property 'waitlist' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/routes/waitlist.routes.ts(25,18): error TS2339: Property 'waitlist' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+    at createTSError (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2339, 2339 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ override existing { override: true }
+/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/waitlist.routes.ts(16,35): error TS2339: Property 'waitlist' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/routes/waitlist.routes.ts(25,18): error TS2339: Property 'waitlist' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+    at createTSError (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2339, 2339 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/waitlist.routes.ts(16,35): error TS2339: Property 'waitlist' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+src/routes/waitlist.routes.ts(25,18): error TS2339: Property 'waitlist' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+    at createTSError (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1706:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/amaanansari/Documents/AUMorph/AUMorph/backend/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  diagnosticCodes: [ 2339, 2339 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ override existing { override: true }
+Server is running on port 5001

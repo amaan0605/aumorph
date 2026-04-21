@@ -66,4 +66,16 @@ router.delete('/products/:id', async (req, res) => {
   }
 });
 
+// Get all waitlist entries
+router.get('/waitlist', async (req, res) => {
+  try {
+    const waitlist = await prisma.waitlist.findMany({
+      orderBy: { createdAt: 'desc' }
+    });
+    res.json(waitlist);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch waitlist' });
+  }
+});
+
 export default router;
