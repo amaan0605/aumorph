@@ -86,3 +86,11 @@ src/routes/waitlist.routes.ts(25,18): error TS2339: Property 'waitlist' does not
 [32m[nodemon] starting `ts-node src/index.ts`[39m
 ◇ injected env (3) from .env // tip: ⌘ override existing { override: true }
 Server is running on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+Server is running on port 5001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+◇ injected env (3) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+Server is running on port 5001
