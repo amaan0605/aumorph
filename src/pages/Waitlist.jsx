@@ -38,18 +38,18 @@ export const Waitlist = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
-      
+
       let data;
       try {
         data = await res.json();
       } catch (parseError) {
         throw new Error('Backend is restarting or unavailable. Please make sure you ran the Prisma commands and restarted the server.');
       }
-      
+
       if (!res.ok) {
         throw new Error(data.error || 'Failed to join waitlist');
       }
-      
+
       setSubmitted(true);
       setEmail('');
     } catch (err) {
@@ -90,7 +90,7 @@ export const Waitlist = () => {
           }
         `}
       </style>
-      
+
       <div style={{
         position: 'absolute',
         inset: 0,
@@ -121,14 +121,14 @@ export const Waitlist = () => {
         }}
       >
         <motion.div variants={fadeIn} style={{ marginBottom: '60px' }}>
-          <img 
-            src="/logo.svg" 
-            alt="AUMORPH" 
-            style={{ height: '36px', filter: 'invert(1)', opacity: 0.9 }} 
+          <img
+            src="/logo.svg"
+            alt="AUMORPH"
+            style={{ height: '36px', filter: 'invert(1)', opacity: 0.9 }}
             onError={(e) => { e.target.style.display = 'none'; }}
           />
           {!document.querySelector('img[src="/logo.svg"]') && (
-             <h1 style={{ fontSize: '1.2rem', letterSpacing: '0.3em', textTransform: 'uppercase', fontWeight: 300 }}>AUMORPH</h1>
+            <h1 style={{ fontSize: '1.2rem', letterSpacing: '0.3em', textTransform: 'uppercase', fontWeight: 300 }}>AUMORPH</h1>
           )}
         </motion.div>
 
@@ -141,9 +141,9 @@ export const Waitlist = () => {
           letterSpacing: '-0.02em',
           textShadow: '0 10px 30px rgba(0,0,0,0.5)'
         }}>
-          Out of the shadows.
+          A study in light and form.
         </motion.h1>
-        
+
         <motion.p variants={fadeIn} style={{
           fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
           marginBottom: '48px',
@@ -152,8 +152,7 @@ export const Waitlist = () => {
           maxWidth: '500px',
           fontWeight: 300
         }}>
-          Algorithm meets artisan. We are crafting a new era of 3D-printed architectural lighting. 
-          The first edition is strictly limited.
+          The first AUMORPH edition is limited.
         </motion.p>
 
         <motion.div variants={fadeIn} style={{ width: '100%', maxWidth: '420px', marginBottom: '60px' }}>
@@ -209,10 +208,10 @@ export const Waitlist = () => {
                 />
               </div>
               {error && <p style={{ color: '#ff4444', fontSize: '0.9rem', textAlign: 'left' }}>{error}</p>}
-              <Button type="submit" disabled={isLoading} style={{ 
-                width: '100%', 
-                padding: '18px', 
-                fontSize: '1.1rem', 
+              <Button type="submit" disabled={isLoading} style={{
+                width: '100%',
+                padding: '18px',
+                fontSize: '1.1rem',
                 letterSpacing: '0.05em',
                 borderRadius: '2px',
                 textTransform: 'uppercase',
@@ -225,29 +224,29 @@ export const Waitlist = () => {
         </motion.div>
 
         <motion.div variants={fadeIn}>
-          <a 
-            href="https://www.instagram.com/3dthekedaar?igsh=MXZ3c2lzcDN0Y214bA==" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              gap: '12px', 
-              color: 'var(--color-soft-grey)', 
-              textDecoration: 'none', 
+          <a
+            href="https://www.instagram.com/3dthekedaar?igsh=MXZ3c2lzcDN0Y214bA=="
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '12px',
+              color: 'var(--color-soft-grey)',
+              textDecoration: 'none',
               transition: 'all 0.3s ease',
               padding: '12px 24px',
-              border: '1px solid transparent',
+              border: '1px solid rgba(255,255,255,0.15)',
               borderRadius: '30px'
-            }} 
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.color = 'var(--color-white)';
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)';
               e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
-            }} 
+            }}
             onMouseLeave={(e) => {
               e.currentTarget.style.color = 'var(--color-soft-grey)';
-              e.currentTarget.style.borderColor = 'transparent';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
               e.currentTarget.style.backgroundColor = 'transparent';
             }}
           >
@@ -257,8 +256,8 @@ export const Waitlist = () => {
         </motion.div>
 
       </motion.div>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
